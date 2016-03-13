@@ -1,0 +1,31 @@
+/* CSS declarations go here */
+.selected{
+  background-color: yellow;
+}
+
+.editfield{
+  border:none;
+  font-size: 100%;
+  padding: 0.15em;
+}
+
+.editfield:hover{
+  background-color:#f9f9f9;
+  cursor:pointer;
+}
+
+.editfield:focus{
+  background-color:#f9f9f9;
+  cursor:default;
+  outline:none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}

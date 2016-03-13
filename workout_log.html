@@ -1,0 +1,51 @@
+<head>
+  <title>Workout Log</title>
+</head>
+
+<body>
+  <div class = "container">
+  <div class="col-md-8 col-md-offset-2">
+    {{> loginButtons}}
+    <h1>Track your progress!</h1>
+    {{> exercises}}
+    {{> addExercise}}
+  </div>
+  </div><!-- end container -->
+</body>
+
+<template name="exercises">
+  <table class = "table">
+    <thead>
+      <th>Name</th>
+      <th>Weight</th>
+      <th>Sets</th>
+      <th>Reps</th>
+      <th>Actions</th>
+    </thead>
+    <tbody>
+      {{#each exercise}}
+        {{> eachExercise}}
+      {{/each}}
+    </tbody>
+  </table>
+  <!--input type="button" class = "remove" value="Delete Selected Exercise"-->
+</template>
+
+<template name="eachExercise">
+  <tr class = "exercise {{selectedClass}}">
+    <td><input type="text" value="{{name}}" name="exerciseName" class="editfield"></td>
+    <td><input type="number" value="{{weight}}" name="exerciseWeight" class="editfield"></td>
+    <td><input type="number" value="{{sets}}" name="exerciseSets" class="editfield"></td>
+    <td><input type="number" value="{{reps}}" name="exerciseReps" class="editfield"></td>
+    <td><input type="button" class="remove btn btn-danger btn-xs" value="Delete"></td>
+  </tr>
+</template>
+
+<template name="addExercise">
+  {{#if currentUser}}
+    <form class="form-inline" role="form">
+      <input type="text" class="form-control" name="exerciseName">
+      <input type="submit" class="btn btn-primary" value="Add Exercise">
+    </form>
+  {{/if}}
+</template>
