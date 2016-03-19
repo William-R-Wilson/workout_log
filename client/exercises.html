@@ -1,0 +1,17 @@
+<template name="exercises">
+  <table class = "table">
+    <thead>
+      <th>Name</th>
+      <th>Weight</th>
+      <th>Sets</th>
+      <th>Reps</th>
+      <th>Actions</th>
+    </thead>
+    <tbody>
+      {{#each exercise}}
+        {{> eachExercise}}
+      {{/each}}
+    </tbody>
+  </table>
+  <!--input type="button" class = "remove" value="Delete Selected Exercise"-->
+</template>

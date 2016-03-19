@@ -1,14 +1,19 @@
 ExerciseList = new Mongo.Collection('exercises');
 WorkoutList = new Mongo.Collection('workouts');
 
+
 if (Meteor.isClient) {
 
   Meteor.subscribe('theExercises');
 
+  Template.addWorkout.rendered = function(){
+    $('.datetimepicker').datetimepicker();
+  };
+
   Template.exercises.helpers({
     'exercise': function() {
       var currentUserId = Meteor.userId();
-      return ExerciseList.find()
+      return ExerciseList.find();
     },
     'selectedClass': function(){
       var exerciseId = this._id;
@@ -92,16 +97,20 @@ if (Meteor.isServer) {
     },
 
     'editExerciseName': function(exerciseId, exercise){
-        ExerciseList.update({_id: exerciseId}, {$set: {name: exercise}});
+        ExerciseList.update({_id: exerciseId},
+          {$set: {name: exercise}});
     },
     'editExerciseReps': function(exerciseId, reps){
-        ExerciseList.update({_id: exerciseId}, {$set: {reps: reps}});
+        ExerciseList.update({_id: exerciseId},
+          {$set: {reps: reps}});
     },
     'editExerciseSets': function(exerciseId, sets){
-        ExerciseList.update({_id: exerciseId}, {$set: {sets: sets}});
+        ExerciseList.update({_id: exerciseId},
+          {$set: {sets: sets}});
     },
     'editExerciseWeight': function(exerciseId, weight){
-        ExerciseList.update({_id: exerciseId}, {$set: {weight: weight}});
+        ExerciseList.update({_id: exerciseId},
+          {$set: {weight: weight}});
     }
   });
 

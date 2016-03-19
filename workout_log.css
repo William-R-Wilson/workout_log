@@ -29,3 +29,13 @@ input[type=number]::-webkit-outer-spin-button {
 input[type="number"] {
     -moz-appearance: textfield;
 }
+
+.cp {
+  float: right;
+}
+
+ul.bottom-links li {
+  margin-left: 10px;
+  display: inline;
+  decoration: none;
+}
