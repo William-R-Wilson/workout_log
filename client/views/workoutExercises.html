@@ -8,15 +8,16 @@
       <th>Actions</th>
     </thead>
     <tbody>
+      {{#if currentWorkout}}
+        <!-- div>These will be for workout {{currentWorkout}}</div -->
+        {{#each workoutExercise}}
+          {{> eachWorkoutExercise}}
+        {{/each}}
+      {{else}}
+        <tr>No workout selected</tr>
+      {{/if}}
     </tbody>
   </table>
-  {{#if currentWorkout}}
-    <!-- div>These will be for workout {{currentWorkout}}</div -->
-    {{#each workoutExercise}}
-    <div>{{> eachWorkoutExercise}}</div>
-    {{/each}}
-  {{else}}
-    <div>No workout selected</div>
-  {{/if}}
+
   <!--input type="button" class = "remove" value="Delete Selected Exercise"-->
 </template>

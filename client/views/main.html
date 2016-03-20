@@ -1,6 +1,8 @@
 <template name="main">
     <div class = "container">
-      {{> loginButtons}}
+      <div class = "row">
+        <div class = "col-md-4 col-md-offset-8">{{> loginButtons}}</div>
+      </div>
       {{#if currentUser}}
       {{> yield}}
       {{else}}

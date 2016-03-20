@@ -1,19 +1,24 @@
 <template name="home">
 
-  <div class ="col-md-3">
-
-    {{> addWorkout}}
-    <h2>All Workouts</h2>
-    {{> workouts}}
+  <div class = "row">
+    <div class ="col-md-3">
+      {{> addWorkout}}
+    </div>
   </div>
+  <div class = "row">
+    <div class = "col-md-3">
+      <h2>All Workouts</h2>
+      {{> workouts}}
+    </div>
 
 
-  <div class="col-md-8">
+    <div class="col-md-8">
 
-    <h1>Track your progress!</h1>
+      <h1>Track your progress!</h1>
 
-    {{> workoutExercises}}
-    {{> addWorkoutExercise}}
+      {{> workoutExercises}}
+      {{> addWorkoutExercise}}
+    </div>
   </div>
 
 </template>

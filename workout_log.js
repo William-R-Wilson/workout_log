@@ -76,6 +76,7 @@ if (Meteor.isClient) {
         return;
       }
       else {
+        event.target.workoutExerciseName.value = "";
         Meteor.call('insertWorkoutExercise', exerciseNameVar, workoutId, currentUserId);
       }
     }
@@ -92,6 +93,7 @@ if (Meteor.isClient) {
       var workoutDateVar = event.target.workoutDate.value;
       console.log(workoutDateVar);
       console.log(currentUserId);
+      event.target.workoutDate.value = "";
       Meteor.call('insertWorkoutData', workoutDateVar, currentUserId);
     }
   });
