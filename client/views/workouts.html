@@ -1,0 +1,14 @@
+<template name="workouts">
+
+  <ul class = "list-group">
+    {{#each workout}}
+      <li class = "list-group-item clearfix selectWorkout {{selectedWorkout}}">
+        <span>{{date}}</span>
+        <span class = "pull-right">
+          <button class="btn btn-danger btn-xs" id="deleteWorkout">delete</button>
+        </span>
+      </li>
+    {{/each}}
+  </ul>
+
+</template>

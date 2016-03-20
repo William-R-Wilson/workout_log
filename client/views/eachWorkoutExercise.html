@@ -1,0 +1,9 @@
+<template name="eachWorkoutExercise">
+    <tr class = "exercise {{selectedClass}}">
+      <td><input type="text" value="{{name}}" name="weName" class="editfield"></td>
+      <td><input type="number" value="{{weight}}" name="weWeight" class="editfield"></td>
+      <td><input type="number" value="{{sets}}" name="weSets" class="editfield"></td>
+      <td><input type="number" value="{{reps}}" name="weReps" class="editfield"></td>
+      <td><input type="button" class="remove btn btn-danger btn-xs" value="Delete"></td>
+    </tr>
+</template>

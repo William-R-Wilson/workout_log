@@ -1,6 +1,11 @@
 /* CSS declarations go here */
 .selected{
-  background-color: yellow;
+  background-color: #E9E8E8;
+}
+
+.selectWorkout:hover{
+  border: none;
+  cursor: pointer;
 }
 
 .editfield{

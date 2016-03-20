@@ -1,0 +1,22 @@
+<template name="main">
+    <div class = "container">
+      {{> loginButtons}}
+      {{#if currentUser}}
+      {{> yield}}
+      {{else}}
+      <h1>Login to start tracking your progress!</h1>
+      {{/if}}
+  </div>
+  <hr />
+  <div class = "well well-sm">
+    {{> navigation}}
+  </div>
+  <span class = "cp">
+    <small>
+      &copy; 2016
+      <a href="https://williamrwilson.com">William R. Wilson</a>.  Built with
+      <a href="https://www.meteor.com/">Meteor</a>
+    </small>
+  </span>
+
+</template>

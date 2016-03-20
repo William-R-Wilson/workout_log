@@ -1,0 +1,22 @@
+<template name="workoutExercises">
+  <table class = "table">
+    <thead>
+      <th>Name</th>
+      <th>Weight</th>
+      <th>Sets</th>
+      <th>Reps</th>
+      <th>Actions</th>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+  {{#if currentWorkout}}
+    <!-- div>These will be for workout {{currentWorkout}}</div -->
+    {{#each workoutExercise}}
+    <div>{{> eachWorkoutExercise}}</div>
+    {{/each}}
+  {{else}}
+    <div>No workout selected</div>
+  {{/if}}
+  <!--input type="button" class = "remove" value="Delete Selected Exercise"-->
+</template>
