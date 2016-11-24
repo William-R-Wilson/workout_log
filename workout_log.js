@@ -47,19 +47,19 @@ if (Meteor.isClient) {
     'keyup [name=weReps]': function(event){
       var exerciseId = this._id;
       var reps = $(event.target).val();
-      Meteor.call('editWeReps', exerciseId, reps);
+      Meteor.call('editWeReps', exerciseId, Number(reps));
     },
 
     'keyup [name=weSets]': function(event){
       var exerciseId = this._id;
       var sets = $(event.target).val();
-      Meteor.call('editWeSets', exerciseId, sets);
+      Meteor.call('editWeSets', exerciseId, Number(sets));
     },
 
     'keyup [name=weWeight]': function(event){
       var exerciseId = this._id;
       var weight = $(event.target).val();
-      Meteor.call('editWeWeight', exerciseId, weight);
+      Meteor.call('editWeWeight', exerciseId, Number(weight));
     }
   });
 
@@ -174,19 +174,19 @@ if (Meteor.isClient) {
     'keyup [name=exerciseReps]': function(event){
       var exerciseId = this._id;
       var reps = $(event.target).val();
-      Meteor.call('editExerciseReps', exerciseId, reps);
+      Meteor.call('editExerciseReps', exerciseId, Number(reps));
     },
 
     'keyup [name=exerciseSets]': function(event){
       var exerciseId = this._id;
       var sets = $(event.target).val();
-      Meteor.call('editExerciseSets', exerciseId, sets);
+      Meteor.call('editExerciseSets', exerciseId, Number(sets));
     },
 
     'keyup [name=exerciseWeight]': function(event){
       var exerciseId = this._id;
       var weight = $(event.target).val();
-      Meteor.call('editExerciseWeight', exerciseId, weight);
+      Meteor.call('editExerciseWeight', exerciseId, Number(weight));
     }
   });
 }

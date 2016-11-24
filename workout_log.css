@@ -22,6 +22,7 @@
 .editfield:focus{
   background-color:#f9f9f9;
   cursor:default;
+  border: solid black 1px;
   outline:none;
 }
 
@@ -37,10 +38,16 @@ input[type="number"] {
 
 .cp {
   float: right;
+  margin-right: 25px;
 }
 
 ul.bottom-links li {
   margin-left: 10px;
   display: inline;
   decoration: none;
+}
+
+.input-group-addon {
+  background-color: white;
+  border: hidden;
 }
