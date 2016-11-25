@@ -1,4 +1,4 @@
-example server/smtp.js will need to be set to mail password reset:
+will need a server/smtp.js file to email password reset:
 
 ```Meteor.startup(function(){
   smtp = {

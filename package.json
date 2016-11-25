@@ -1,0 +1,23 @@
+{
+  "name": "workout_log",
+  "version": "1.0.0",
+  "description": "will need a server/smtp.js file to email password reset:",
+  "main": "workout_log.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/William-R-Wilson/workout_log.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/William-R-Wilson/workout_log/issues"
+  },
+  "homepage": "https://github.com/William-R-Wilson/workout_log#readme",
+  "dependencies": {
+    "babel-runtime": "^6.18.0",
+    "bcrypt": "^0.8.7"
+  }
+}
