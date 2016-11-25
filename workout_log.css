@@ -51,3 +51,12 @@ ul.bottom-links li {
   background-color: white;
   border: hidden;
 }
+
+ul.paginate li {
+  decoration: none;
+  display: inline;
+}
+
+.disabled {
+  display: none;
+}

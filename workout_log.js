@@ -4,7 +4,6 @@ WorkoutExercises = new Mongo.Collection('workoutExercises');
 
 if (Meteor.isClient) {
   Meteor.subscribe('theExercises');
-  Meteor.subscribe('theWorkouts');
   Meteor.subscribe('theWorkoutExercises');
 
   Template.workoutExercises.helpers({
@@ -96,40 +95,6 @@ if (Meteor.isClient) {
       event.target.workoutDate.value = "";
       Meteor.call('insertWorkoutData', workoutDateVar, currentUserId);
     }
-  });
-
-  Template.workouts.helpers({
-    'workout': function() {
-      var currentUserId = Meteor.userId();
-      return WorkoutList.find({}, {sort: {date:-1}});
-    },
-    'selectedWorkout': function(){
-      var workoutId = this._id;
-      var thisWorkout = Session.get('selectedWorkout');
-      if(workoutId == thisWorkout){
-        return 'selected';
-      }
-    },
-    'workoutExercises': function(){
-      var currentUserId = Meteor.user.Id();
-      var thisWorkout = Session.get('selectedWorkout');
-      return WorkoutList.find({workout_id: thisWorkout});
-    }
-
-  });
-
-  Template.workouts.events({
-    'click #deleteWorkout': function() {
-      var currentUserId = Meteor.userId();
-      var workoutId = this._id;
-      Meteor.call('deleteWorkoutData', workoutId, currentUserId);
-    },
-
-    'click .selectWorkout': function(){
-      Session.set('selectedWorkout', this._id);
-      var currentUserId = Meteor.userId();
-    }
-
   });
 
   Template.exercises.helpers({

@@ -2,7 +2,7 @@ Router.configure({
   layoutTemplate: 'main'
 });
 
-Router.route('/', {
+Router.route('/:page?', {
   name: 'home',
   template: 'home'
 });
