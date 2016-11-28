@@ -67,16 +67,14 @@ if (Meteor.isClient) {
       event.preventDefault();
       var currentUserId = Meteor.userId();
       var exerciseNameVar = event.target.workoutExerciseName.value;
-      console.log(exerciseNameVar);
       var workoutId = Session.get('selectedWorkout');
-      console.log(workoutId);
       if(workoutId === null){
-        console.log("select a workout!");
         return;
       }
       else {
         event.target.workoutExerciseName.value = "";
         Meteor.call('insertWorkoutExercise', exerciseNameVar, workoutId, currentUserId);
+        Meteor.call('insertExerciseData', exerciseNameVar);
       }
     }
   });

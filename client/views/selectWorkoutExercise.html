@@ -1,0 +1,10 @@
+<template name = "selectWorkoutExercise">
+  {{#if currentUser}}
+    <select id = "selectExercises">
+      <option disabled = "disabled" selected = "selected">Please Select</option>
+      {{#each exercises}}
+        <option value = "{{this}}">{{this}}</option>
+      {{/each}}
+    </select>
+  {{/if}}
+</template>

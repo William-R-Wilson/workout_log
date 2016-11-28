@@ -6,10 +6,6 @@
       var currentUserId = Meteor.userId();
       ExerciseList.insert({
         name: exerciseNameVar,
-        weight: 0,
-        sets: 0,
-        reps: 0,
-        createdBy: currentUserId
         }
       )
     },

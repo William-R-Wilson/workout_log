@@ -52,11 +52,15 @@ ul.bottom-links li {
   border: hidden;
 }
 
+ul.paginate {
+}
+
 ul.paginate li {
   decoration: none;
   display: inline;
 }
 
 .disabled {
-  display: none;
+  color: gray;
+  cursor: not-allowed;
 }

@@ -10,18 +10,16 @@
       </li>
     {{/each}}
   </ul>
-  <nav>
-    <ul class="paginate">
-      <li>
+    <ul class="pager">
+      <li class = "pull-left">
         <a id="prevPage" href="{{newerWorkouts}}">
-          <span class = "{{newerWorkoutsClass}}" aria-hidden="true"><i><span class="glyphicon glyphicon-chevron-left"></span></i>Newer</span>
+          <span disabled = "{{newerWorkoutsDisabled}}" class = "{{newerWorkoutsClass}}" aria-hidden="true"><i class="glyphicon glyphicon-chevron-left"></i>Newer</span>
         </a>
       </li>
-      <li>
+      <li class = "pull-right">
         <a id="nextPage" href="{{olderWorkouts}}">
-          <span class = "{{olderWorkoutsClass}}" aria-hidden="true">Older<span class="glyphicon glyphicon-chevron-right"></span></span>
+          <span disabled = "{{olderWorkoutsDisabled}}" class = "{{olderWorkoutsClass}}" aria-hidden="true">Older<i class="glyphicon glyphicon-chevron-right"></i></span>
         </a>
       </li>
     </ul>
-  </nav>
 </template>

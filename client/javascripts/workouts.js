@@ -25,12 +25,20 @@ Template.workouts.helpers({
     var thisWorkout = Session.get('selectedWorkout');
     return WorkoutList.find({workout_id: thisWorkout});
   },
+  'newerWorkoutsDisabled': function(){
+    return currentPage() <= 1 ? "true" : "false";
+  },
+  'olderWorkoutsDisabled': function(){
+    return hasMorePages() ? "false" : "true";
+  },
   'newerWorkoutsClass': function(){
     return currentPage() <= 1 ? "disabled" : "";
   },
   'olderWorkoutsClass': function(){
     return hasMorePages() ? "" : "disabled";
   }
+
+
 
 });
 
