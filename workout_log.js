@@ -88,10 +88,12 @@ if (Meteor.isClient) {
       event.preventDefault();
       var currentUserId = Meteor.userId();
       var workoutDateVar = event.target.workoutDate.value;
-      console.log(workoutDateVar);
-      console.log(currentUserId);
+      console.log("Date " + workoutDateVar);
+      console.log("User " + currentUserId);
       event.target.workoutDate.value = "";
-      Meteor.call('insertWorkoutData', workoutDateVar, currentUserId);
+      if (workoutDateVar !== "") {
+        Meteor.call('insertWorkoutData', workoutDateVar, currentUserId);
+      };
     }
   });
 

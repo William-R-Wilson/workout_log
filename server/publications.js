@@ -23,21 +23,6 @@ Meteor.publish('theWorkouts', function(pageCount){
   });
 });
 
-//example code for pagination
-
-//Meteor.publish('customers', function(skipCount) {
-//  var positiveIntegerCheck = Match.Where(function(x) {
-//    check(x, Match.Integer);
-//    return x >= 0;
-//  });
-//  check(skipCount, positiveIntegerCheck);
-//
-//  return Customers.find({}, {
-//    limit: 3, // records to show per page
-//    skip: skipCount
-//  });
-//});
-
 Meteor.publish('theWorkoutExercises', function(){
   var currentUserId = this.userId;
   return WorkoutExercises.find({createdBy: currentUserId})

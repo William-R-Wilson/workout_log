@@ -36,7 +36,31 @@ input[type="number"] {
     -moz-appearance: textfield;
 }
 
+/* footer */
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 120px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
 .cp {
+  position: relative;
   float: right;
   margin-right: 25px;
 }
@@ -50,14 +74,6 @@ ul.bottom-links li {
 .input-group-addon {
   background-color: white;
   border: hidden;
-}
-
-ul.paginate {
-}
-
-ul.paginate li {
-  decoration: none;
-  display: inline;
 }
 
 .disabled {

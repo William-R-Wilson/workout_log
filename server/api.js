@@ -36,6 +36,7 @@
 
     'insertWorkoutData': function(date, user){
       console.log("insertWorkoutData called");
+      check(date, String);
       WorkoutList.insert({
         date: date,
         createdBy: user
